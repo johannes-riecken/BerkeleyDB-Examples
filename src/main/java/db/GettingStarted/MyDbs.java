@@ -21,7 +21,6 @@ import com.sleepycat.je.DatabaseException;
 import com.sleepycat.je.SecondaryConfig;
 import com.sleepycat.je.SecondaryDatabase;
 
-
 public class MyDbs {
 
     // The databases that our application uses
@@ -98,7 +97,6 @@ public class MyDbs {
         // and open a secondary database.
         ItemNameKeyCreator keyCreator =
             new ItemNameKeyCreator(new InventoryBinding());
-
 
         // Set up additional secondary properties
         // Need to allow duplicates for our secondary database

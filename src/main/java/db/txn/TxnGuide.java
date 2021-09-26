@@ -72,7 +72,6 @@ public class TxnGuide {
         System.out.println("All done.");
     }
 
-
     private static void openEnv() throws DatabaseException {
         System.out.println("opening env");
 

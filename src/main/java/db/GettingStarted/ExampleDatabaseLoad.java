@@ -46,7 +46,6 @@ public class ExampleDatabaseLoad {
         System.exit(-1);
     }
 
-
     public static void main(String args[]) {
         ExampleDatabaseLoad edl = new ExampleDatabaseLoad();
         try {
@@ -63,7 +62,6 @@ public class ExampleDatabaseLoad {
         System.out.println("All done.");
     }
 
-
     private void run(String args[])
         throws DatabaseException {
         // Parse the arguments list
@@ -77,7 +75,6 @@ public class ExampleDatabaseLoad {
         System.out.println("loading inventory db....");
         loadInventoryDb();
     }
-
 
     private void loadVendorsDb()
             throws DatabaseException {
@@ -123,7 +120,6 @@ public class ExampleDatabaseLoad {
         }
     }
 
-
     private void loadInventoryDb()
         throws DatabaseException {
 
@@ -164,7 +160,6 @@ public class ExampleDatabaseLoad {
         }
     }
 
-
     private static void parseArgs(String args[]) {
         for(int i = 0; i < args.length; ++i) {
             if (args[i].startsWith("-")) {
@@ -184,7 +179,6 @@ public class ExampleDatabaseLoad {
             }
         }
     }
-
 
     private List loadFile(File theFile, int numFields) {
         List records = new ArrayList();
@@ -215,7 +209,6 @@ public class ExampleDatabaseLoad {
         return records;
     }
 
-
     private static String[] splitString(String s, String delimiter) {
         Vector resultVector = new Vector();
         StringTokenizer tokenizer = new StringTokenizer(s, delimiter);
@@ -225,7 +218,6 @@ public class ExampleDatabaseLoad {
         resultVector.copyInto(resultArray);
         return resultArray;
     }
-
 
     protected ExampleDatabaseLoad() {}
 }

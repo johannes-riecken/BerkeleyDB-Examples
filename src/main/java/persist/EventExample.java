@@ -131,7 +131,6 @@ public class EventExample {
     /* Used for generating example data. */
     private Calendar cal;
 
-
     /*
      * First manually make a directory to house the BDB environment.
      * Usage: java EventExample -h <envHome>
@@ -182,7 +181,6 @@ public class EventExample {
                                    "eventDb", // file name
                                    null,      // database name
                                    dbConfig);
-
 
         /*
          * In our example, the database record is composed of a key portion

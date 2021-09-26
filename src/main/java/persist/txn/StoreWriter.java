@@ -30,7 +30,6 @@ public class StoreWriter extends Thread
     private Random generator = new Random();
     private boolean passTxn = false;
 
-
     private static final int MAX_RETRY = 20;
 
     // Constructor. Get our handles from here

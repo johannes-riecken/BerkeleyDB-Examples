@@ -137,7 +137,6 @@ public class Sample {
      */
     private class PrintDatabase implements TransactionWorker {
 
-
         public void doWork()
             throws Exception {
             printValues("Parts",

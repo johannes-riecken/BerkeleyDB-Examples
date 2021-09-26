@@ -109,11 +109,9 @@ public class AccessExample
         System.exit(0);
     }
 
-
     private Database db;
     private SortedMap map;
     private Environment env;
-
 
     /**
      *  Constructor for the AccessExample object
@@ -221,7 +219,6 @@ public class AccessExample
         }
     }
 
-
     /**
      *  Prompts for a line, and keeps prompting until a non blank line is
      *  returned. Returns null on error.
@@ -242,7 +239,6 @@ public class AccessExample
         }
         return result;
     }
-
 
     /**
      *  Read a single line. Gets the line attribute of the AccessExample object
@@ -273,7 +269,6 @@ public class AccessExample
             return b.toString();
         }
     }
-
 
     /**
      *  A simple log method.

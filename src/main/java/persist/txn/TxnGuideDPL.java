@@ -67,7 +67,6 @@ public class TxnGuideDPL {
         System.out.println("All done.");
     }
 
-
     private static void openEnv() throws DatabaseException {
         System.out.println("opening env and store");
 

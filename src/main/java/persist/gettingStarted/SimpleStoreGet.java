@@ -55,7 +55,6 @@ public class SimpleStoreGet {
         envmnt.close();
     } 
 
-
     private void run()
         throws DatabaseException {
 
@@ -93,8 +92,6 @@ public class SimpleStoreGet {
         for (SimpleEntityClass seci : sda.sec_scursor ) {
                 System.out.println("sec from scursor : " + seci.getpKey() );
         }
-
-
 
         sda.close();
         shutdown();

@@ -6,7 +6,6 @@
  * $Id$
  */
 
-
 package db;
 
 import com.sleepycat.je.*;

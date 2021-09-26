@@ -57,7 +57,6 @@ public class SimpleStorePut {
         envmnt.close();
     } 
 
-
     private void run()
         throws DatabaseException {
 
