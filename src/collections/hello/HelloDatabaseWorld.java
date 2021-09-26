@@ -105,7 +105,7 @@ public class HelloDatabaseWorld implements TransactionWorker {
 //				worker.close();
 				System.out.println("closed");
 			}
-			
+
 		}
 	}
 
@@ -150,7 +150,7 @@ public class HelloDatabaseWorld implements TransactionWorker {
 		ByteArrayBinding dataBinding = new ByteArrayBinding();
 //		TupleBinding<String> keyBinding = TupleBinding.getPrimitiveBinding(String.class);
 //		TupleBinding<String> dataBinding = TupleBinding.getPrimitiveBinding(String.class);
-		
+
 		// use String serial binding for data entries
 		// changed one line
 		// SerialBinding<String> dataBinding = new
@@ -184,7 +184,7 @@ public class HelloDatabaseWorld implements TransactionWorker {
 
 	/**
 	 * Writes and reads the database via the Map.
-	 * 
+	 *
 	 * @throws IOException
 	 * @throws DatabaseException
 	 */
@@ -215,7 +215,7 @@ public class HelloDatabaseWorld implements TransactionWorker {
 //		bos.write(new byte[] { (byte) 0xFF, (byte) 0xFE });
 		// bos.write(new byte[]{(byte)0xFF,(byte)0xFE,(byte)0x00,(byte)0x00});
 		// System.out.println(new String((byte[])
-		// map.get("\\conf\\vnm\\help\\11.1.6.3.ÈÎÎñ.txt\0".getBytes("UTF-16LE")),
+		// map.get("\\conf\\vnm\\help\\11.1.6.3.\xec\x8e\x88\xec\x8e\x8e\xec\x8e\x8e\xec\x8e\xb1.txt\0".getBytes("UTF-16LE")),
 		// "UTF-16LE"));
 		while (iter.hasNext()) {
 			Map.Entry entry = (Map.Entry) iter.next();
