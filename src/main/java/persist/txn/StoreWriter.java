@@ -120,7 +120,7 @@ public class StoreWriter extends Thread
                     System.err.println(getName() +
                         " : caught exception: " + e.toString());
                     System.err.println(getName() +
-                        " : errno: " + e.getErrno());
+                        " : errno: " + "e.getErrno()");
                     e.printStackTrace();
                 } finally {
                     if (txn != null) {
@@ -156,7 +156,7 @@ public class StoreWriter extends Thread
         CursorConfig cc = new CursorConfig();
         // This is ignored if the store is not opened with uncommitted read
         // support.
-        cc.setReadUncommitted(true);
+//        cc.setReadUncommitted(true);
         EntityCursor<PayloadDataEntity> cursor = pdKey.entities(txn, cc);
 
         try {

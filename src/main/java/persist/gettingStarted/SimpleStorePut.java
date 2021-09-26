@@ -39,15 +39,10 @@ public class SimpleStorePut {
 //        envConfig.setInitializeCache(true);
         storeConfig.setAllowCreate(true);
 
-        try {
-            // Open the environment and entity store
-            envmnt = new Environment(envHome, envConfig);
-            store = new EntityStore(envmnt, "EntityStore", storeConfig);
-        } catch (FileNotFoundException fnfe) {
-            System.err.println("setup(): " + fnfe.toString());
-            System.exit(-1);
-        }
-    } 
+        // Open the environment and entity store
+        envmnt = new Environment(envHome, envConfig);
+        store = new EntityStore(envmnt, "EntityStore", storeConfig);
+    }
 
     // Close our environment and store.
     public void shutdown()

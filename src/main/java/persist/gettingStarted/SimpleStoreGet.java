@@ -33,20 +33,15 @@ public class SimpleStoreGet {
     public void setup()
         throws DatabaseException {
 
-        try {
-            EnvironmentConfig envConfig = new EnvironmentConfig();
-            StoreConfig storeConfig = new StoreConfig();
-            storeConfig.setAllowCreate(true);
+        EnvironmentConfig envConfig = new EnvironmentConfig();
+        StoreConfig storeConfig = new StoreConfig();
+        storeConfig.setAllowCreate(true);
 
-            // Open the environment and entity store
-            envmnt = new Environment(envHome, envConfig);
+        // Open the environment and entity store
+        envmnt = new Environment(envHome, envConfig);
 //            store = new EntityStore(envmnt, "EntityStore", storeConfig);
-            store = new EntityStore(envmnt, "filelist.n2z3", storeConfig);
-        } catch (FileNotFoundException fnfe) {
-            System.err.println("setup(): " + fnfe.toString());
-            System.exit(-1);
-        }
-    } 
+        store = new EntityStore(envmnt, "filelist.n2z3", storeConfig);
+    }
 
     public void shutdown()
         throws DatabaseException {

@@ -146,7 +146,7 @@ public class DBWriter extends Thread
                     System.err.println(getName() +
                         " : caught exception: " + e.toString());
                     System.err.println(getName() +
-                        " : errno: " + e.getErrno());
+                        " : errno: " + "e.getErrno()");
                     e.printStackTrace();
                 } finally {
                     if (txn != null) {
@@ -192,7 +192,7 @@ public class DBWriter extends Thread
             // setReadUncommitted is ignored if the database was not
             // opened for uncommitted read support. TxnGuide opens
             // its database in this way, TxnGuideInMemory does not.
-            cc.setReadUncommitted(true);
+//            cc.setReadUncommitted(true);
             cursor = myDb.openCursor(txn, cc);
             while (cursor.getNext(key, data, LockMode.DEFAULT) ==
                     OperationStatus.SUCCESS) {

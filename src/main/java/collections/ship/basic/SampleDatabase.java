@@ -64,18 +64,17 @@ public class SampleDatabase {
         // Create the Serial class catalog.  This holds the serialized class
         // format for all database records of serial format.
         //
-        Database catalogDb = env.openDatabase(null, CLASS_CATALOG, null,
-                                              dbConfig);
+        Database catalogDb = env.openDatabase(null,CLASS_CATALOG, dbConfig);
         javaCatalog = new StoredClassCatalog(catalogDb);
 
         // Open the Berkeley DB database for the part, supplier and shipment
         // stores.  The stores are opened with no duplicate keys allowed.
         //
-        partDb = env.openDatabase(null, PART_STORE, null, dbConfig);
+        partDb = env.openDatabase(null,PART_STORE, dbConfig);
 
-        supplierDb = env.openDatabase(null, SUPPLIER_STORE, null, dbConfig);
+        supplierDb = env.openDatabase(null,SUPPLIER_STORE, dbConfig);
 
-        shipmentDb = env.openDatabase(null, SHIPMENT_STORE, null, dbConfig);
+        shipmentDb = env.openDatabase(null,SHIPMENT_STORE, dbConfig);
     }
 
     /**

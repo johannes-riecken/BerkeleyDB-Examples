@@ -177,10 +177,7 @@ public class EventExample {
         dbConfig.setTransactional(true);
         dbConfig.setAllowCreate(true);
 //        dbConfig.setType(DatabaseType.BTREE);
-        eventDb = env.openDatabase(null,      // use auto-commit txn
-                                   "eventDb", // file name
-                                   null,      // database name
-                                   dbConfig);
+        eventDb = env.openDatabase(null,"eventDb", dbConfig);
 
         /*
          * In our example, the database record is composed of a key portion
@@ -199,8 +196,8 @@ public class EventExample {
         DatabaseConfig catalogConfig = new DatabaseConfig();
         catalogConfig.setTransactional(true);
         catalogConfig.setAllowCreate(true);
-        catalogConfig.setType(DatabaseType.BTREE);
-        catalogDb = env.openDatabase(null, "catalogDb", null, catalogConfig);
+//        catalogConfig.setType(DatabaseType.BTREE);
+        catalogDb = env.openDatabase(null,"catalogDb", catalogConfig);
         StoredClassCatalog catalog = new StoredClassCatalog(catalogDb);
 
         /*
@@ -219,14 +216,10 @@ public class EventExample {
         SecondaryConfig secConfig = new SecondaryConfig();
         secConfig.setTransactional(true);
         secConfig.setAllowCreate(true);
-        secConfig.setType(DatabaseType.BTREE);
+//        secConfig.setType(DatabaseType.BTREE);
         secConfig.setSortedDuplicates(true);
         secConfig.setKeyCreator(new PriceKeyCreator(eventBinding));
-        eventByPriceDb = env.openSecondaryDatabase(null,
-                                                   "priceDb",
-                                                   null,
-                                                   eventDb,
-                                                   secConfig);
+        eventByPriceDb = env.openSecondaryDatabase(null, "priceDb", eventDb, secConfig);
 
     }
 

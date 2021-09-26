@@ -16,7 +16,7 @@ import com.sleepycat.je.Database;
 import com.sleepycat.je.DatabaseConfig;
 import com.sleepycat.je.DatabaseException;
 //import com.sleepycat.je.DatabaseType;
-import com.sleepycat.je.LockDetectMode;
+//import com.sleepycat.je.LockDetectMode;
 
 import com.sleepycat.je.Environment;
 import com.sleepycat.je.EnvironmentConfig;
@@ -78,10 +78,10 @@ public class TxnGuide {
         // Set up the environment.
         EnvironmentConfig myEnvConfig = new EnvironmentConfig();
         myEnvConfig.setAllowCreate(true);
-        myEnvConfig.setInitializeCache(true);
-        myEnvConfig.setInitializeLocking(true);
-        myEnvConfig.setInitializeLogging(true);
-        myEnvConfig.setRunRecovery(true);
+//        myEnvConfig.setInitializeCache(true);
+//        myEnvConfig.setInitializeLocking(true);
+//        myEnvConfig.setInitializeLogging(true);
+//        myEnvConfig.setRunRecovery(true);
         myEnvConfig.setTransactional(true);
         // EnvironmentConfig.setThreaded(true) is the default behavior
         // in Java, so we do not have to do anything to cause the
@@ -91,43 +91,32 @@ public class TxnGuide {
         // detection. Also indicate that the transaction that has
         // performed the least amount of write activity to
         // receive the deadlock notification, if any.
-        myEnvConfig.setLockDetectMode(LockDetectMode.MINWRITE);
+//        myEnvConfig.setLockDetectMode(LockDetectMode.MINWRITE);
 
         // Set up the database
         DatabaseConfig myDbConfig = new DatabaseConfig();
-        myDbConfig.setType(DatabaseType.BTREE);
+//        myDbConfig.setType(DatabaseType.BTREE);
         myDbConfig.setAllowCreate(true);
         myDbConfig.setTransactional(true);
         myDbConfig.setSortedDuplicates(true);
-        myDbConfig.setReadUncommitted(true);
+//        myDbConfig.setReadUncommitted(true);
         // no DatabaseConfig.setThreaded() method available.
         // db handles in java are free-threaded so long as the
         // env is also free-threaded.
 
-        try {
-            // Open the environment
-            myEnv = new Environment(new File(myEnvPath),    // Env home
-                                    myEnvConfig);
+        // Open the environment
+        myEnv = new Environment(new File(myEnvPath),    // Env home
+                                myEnvConfig);
 
-            // Open the database. Do not provide a txn handle. This open
-            // is autocommitted because DatabaseConfig.setTransactional()
-            // is true.
-            myDb = myEnv.openDatabase(null,     // txn handle
-                                      dbName,   // Database file name
-                                      null,     // Database name
-                                      myDbConfig);
+        // Open the database. Do not provide a txn handle. This open
+        // is autocommitted because DatabaseConfig.setTransactional()
+        // is true.
+        myDb = myEnv.openDatabase(null,dbName, myDbConfig);
 
-            // Used by the bind API for serializing objects
-            // Class database must not support duplicates
-            myDbConfig.setSortedDuplicates(false);
-            myClassDb = myEnv.openDatabase(null,     // txn handle
-                                           cdbName,  // Database file name
-                                           null,     // Database name,
-                                           myDbConfig);
-        } catch (FileNotFoundException fnfe) {
-            System.err.println("openEnv: " + fnfe.toString());
-            System.exit(-1);
-        }
+        // Used by the bind API for serializing objects
+        // Class database must not support duplicates
+        myDbConfig.setSortedDuplicates(false);
+        myClassDb = myEnv.openDatabase(null,cdbName, myDbConfig);
     }
 
     private static void closeEnv() {

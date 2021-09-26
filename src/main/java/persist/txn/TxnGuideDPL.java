@@ -13,7 +13,7 @@ package persist.txn;
 import com.sleepycat.je.DatabaseConfig;
 import com.sleepycat.je.DatabaseException;
 //import com.sleepycat.je.DatabaseType;
-import com.sleepycat.je.LockDetectMode;
+//import com.sleepycat.je.LockDetectMode;
 
 import com.sleepycat.je.Environment;
 import com.sleepycat.je.EnvironmentConfig;
@@ -73,10 +73,10 @@ public class TxnGuideDPL {
         // Set up the environment.
         EnvironmentConfig myEnvConfig = new EnvironmentConfig();
         myEnvConfig.setAllowCreate(true);
-        myEnvConfig.setInitializeCache(true);
-        myEnvConfig.setInitializeLocking(true);
-        myEnvConfig.setInitializeLogging(true);
-        myEnvConfig.setRunRecovery(true);
+//        myEnvConfig.setInitializeCache(true);
+//        myEnvConfig.setInitializeLocking(true);
+//        myEnvConfig.setInitializeLogging(true);
+//        myEnvConfig.setRunRecovery(true);
         myEnvConfig.setTransactional(true);
         // EnvironmentConfig.setThreaded(true) is the default behavior 
         // in Java, so we do not have to do anything to cause the
@@ -86,7 +86,7 @@ public class TxnGuideDPL {
         // detection. Also indicate that the transaction that has
         // performed the least amount of write activity to
         // receive the deadlock notification, if any.
-        myEnvConfig.setLockDetectMode(LockDetectMode.MINWRITE);
+//        myEnvConfig.setLockDetectMode(LockDetectMode.MINWRITE);
 
         // Set up the entity store
         StoreConfig myStoreConfig = new StoreConfig();
@@ -96,26 +96,21 @@ public class TxnGuideDPL {
         // Need a DatabaseConfig object so as to set uncommitted read
         // support.
         DatabaseConfig myDbConfig = new DatabaseConfig();
-        myDbConfig.setType(DatabaseType.BTREE);
+//        myDbConfig.setType(DatabaseType.BTREE);
         myDbConfig.setAllowCreate(true);
         myDbConfig.setTransactional(true);
-        myDbConfig.setReadUncommitted(true);
+//        myDbConfig.setReadUncommitted(true);
 
-        try {
-            // Open the environment
-            myEnv = new Environment(new File(myEnvPath),    // Env home
-                                    myEnvConfig);
+        // Open the environment
+        myEnv = new Environment(new File(myEnvPath),    // Env home
+                                myEnvConfig);
 
-            // Open the store
-            myStore = new EntityStore(myEnv, storeName, myStoreConfig);
+        // Open the store
+        myStore = new EntityStore(myEnv, storeName, myStoreConfig);
 
-            // Set the DatabaseConfig object, so that the underlying
-            // database is configured for uncommitted reads.
-            myStore.setPrimaryConfig(PayloadDataEntity.class, myDbConfig);
-        } catch (FileNotFoundException fnfe) {
-            System.err.println("openEnv: " + fnfe.toString());
-            System.exit(-1);
-        }
+        // Set the DatabaseConfig object, so that the underlying
+        // database is configured for uncommitted reads.
+        myStore.setPrimaryConfig(PayloadDataEntity.class, myDbConfig);
     }
 
     private static void closeEnv() {

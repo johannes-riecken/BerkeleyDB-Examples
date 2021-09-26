@@ -155,9 +155,9 @@ public class HelloDatabaseWorld implements TransactionWorker {
 		// SerialBinding<String> dataBinding = new
 		// SerialBinding<String>(catalog, String.class);
 
-		// this.db = env.openDatabase(null, "helloworld", null, dbConfig);
+		 this.db = env.openDatabase(null,"helloworld", dbConfig);
 		this.db = env.openDatabase(null, dbName, dbConfig);
-		// this.db = env.openDatabase(null, "task.pak", null, dbConfig);
+		// this.db = env.openDatabase(null,"task.pak", dbConfig);
 
 		// create a map view of the database
 		// changed one line
