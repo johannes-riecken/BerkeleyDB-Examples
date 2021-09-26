@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiInfoConf Name="Relive" Version="1.0" SubVersion="20110511-001">
+    <KmUiNode Name="DefaultProject" X="390" Y="264" W="250" H="157" IMG="\face\global\消息弹出框.img" DRAG_MOVE="TRUE">
+        <KmUiButton Name="SafeReliveBtn" X="5" Y="118" W="76" H="22" IMG="\face\global\3号按钮.img" HINT="#ui_3_Relive_SafeReliveBtn_1" TEXT="#ui_3_Relive_SafeReliveBtn">
+            <Font Name="Font" COLOR="#f8f060" FONT_EFFECT="0" />
+            <Font Name="HoverFont" FONT_EFFECT="0" />
+        </KmUiButton>
+        <KmUiButton Name="MoneyReliveBtn" X="169" Y="118" W="76" H="22" IMG="\face\global\3号按钮.img" HINT="#ui_3_Relive_MoneyReliveBtn_2" TEXT="#ui_3_Relive_MoneyReliveBtn">
+            <Font Name="Font" COLOR="#f8f060" FONT_EFFECT="0" />
+            <Font Name="HoverFont" FONT_EFFECT="0" />
+        </KmUiButton>
+        <KmUiRichLabel Name="ReliveInfo" X="22" Y="35" W="207" H="73" ALIGN="Center" VALIGN="Center">
+            <Font Name="Font" COLOR="#f8eca0" FONT_EFFECT="0" />
+            <Font Name="HoverFont" COLOR="#f8eca0" FONT_EFFECT="0" />
+        </KmUiRichLabel>
+        <KmUiLabel Name="Title" X="20" Y="3" W="210" H="20" ALIGN="Center" TEXT="#ui_3_Relive_Title">
+            <Font Name="Font" FONT="UITitle1" COLOR="#f8eca0" FONT_EFFECT="0" />
+        </KmUiLabel>
+        <KmUiButton Name="YuanbaoReliveBtn" X="87" Y="118" W="76" H="22" IMG="\face\global\3号按钮.img" HINT="#ui_3_Relive_YuanbaoReliveBtn_3" TEXT="#ui_3_Relive_YuanbaoReliveBtn">
+            <Font Name="Font" COLOR="#f8f060" FONT_EFFECT="0" />
+            <Font Name="HoverFont" COLOR="#f8f060" FONT_EFFECT="0" />
+        </KmUiButton>
+    </KmUiNode>
+</UiInfoConf>
