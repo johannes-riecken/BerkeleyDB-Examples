@@ -94,15 +94,15 @@ public class SimpleStorePut {
         shutdown();
     } 
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         SimpleStorePut ssp = new SimpleStorePut();
         try {
             ssp.run();
         } catch (DatabaseException dbe) {
-            System.err.println("SimpleStorePut: " + dbe.toString());
+            System.err.println("SimpleStorePut: " + dbe);
             dbe.printStackTrace();
         } catch (Exception e) {
-            System.out.println("Exception: " + e.toString());
+            System.out.println("Exception: " + e);
             e.printStackTrace();
         } 
         System.out.println("All done.");

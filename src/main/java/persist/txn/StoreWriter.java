@@ -95,8 +95,8 @@ public class StoreWriter extends Thread
                         txn.commit();
                         txn = null;
                     } catch (DatabaseException e) {
-                        System.err.println("Error on txn commit: " + 
-                            e.toString());
+                        System.err.println("Error on txn commit: " +
+                                e);
                     } 
                     retry = false;
 
@@ -118,7 +118,7 @@ public class StoreWriter extends Thread
                     // abort and don't retry
                     retry = false;
                     System.err.println(getName() +
-                        " : caught exception: " + e.toString());
+                        " : caught exception: " + e);
                     System.err.println(getName() +
                         " : errno: " + "e.getErrno()");
                     e.printStackTrace();
@@ -127,8 +127,8 @@ public class StoreWriter extends Thread
                         try {
                             txn.abort();
                         } catch (Exception e) {
-                            System.err.println("Error aborting transaction: " + 
-                                e.toString());
+                            System.err.println("Error aborting transaction: " +
+                                    e);
                             e.printStackTrace();
                         }
                     }

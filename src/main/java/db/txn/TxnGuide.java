@@ -42,7 +42,7 @@ public class TxnGuide {
         System.exit(-1);
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             // Parse the arguments list
             parseArgs(args);
@@ -64,7 +64,7 @@ public class TxnGuide {
                 threadArray[i].join();
             }
         } catch (Exception e) {
-            System.err.println("TxnGuide: " + e.toString());
+            System.err.println("TxnGuide: " + e);
             e.printStackTrace();
         } finally {
             closeEnv();
@@ -126,7 +126,7 @@ public class TxnGuide {
                 myDb.close();
             } catch (DatabaseException e) {
                 System.err.println("closeEnv: myDb: " +
-                    e.toString());
+                        e);
                 e.printStackTrace();
             }
         }
@@ -136,7 +136,7 @@ public class TxnGuide {
                 myClassDb.close();
             } catch (DatabaseException e) {
                 System.err.println("closeEnv: myClassDb: " +
-                    e.toString());
+                        e);
                 e.printStackTrace();
             }
         }
@@ -145,7 +145,7 @@ public class TxnGuide {
             try {
                 myEnv.close();
             } catch (DatabaseException e) {
-                System.err.println("closeEnv: " + e.toString());
+                System.err.println("closeEnv: " + e);
                 e.printStackTrace();
             }
         }
@@ -153,12 +153,12 @@ public class TxnGuide {
 
     private TxnGuide() {}
 
-    private static void parseArgs(String args[]) {
+    private static void parseArgs(String[] args) {
         for(int i = 0; i < args.length; ++i) {
             if (args[i].startsWith("-")) {
                 switch(args[i].charAt(1)) {
                     case 'h':
-                        myEnvPath = new String(args[++i]);
+                        myEnvPath = args[++i];
                         break;
                     default:
                         usage();

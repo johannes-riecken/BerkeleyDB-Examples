@@ -197,14 +197,14 @@ public class AccessExample
 			   }
 		       });
             } catch (com.sleepycat.je.DatabaseException e) {
-                System.err.println("AccessExample: " + e.toString());
+                System.err.println("AccessExample: " + e);
                 System.exit(1);
             } catch (java.lang.Exception e) {
-                System.err.println("AccessExample: " + e.toString());
+                System.err.println("AccessExample: " + e);
                 System.exit(1);
             }
         }
-        System.out.println("");
+        System.out.println();
 
         // Do the work to traverse and print the HashMap key/data
         // pairs here get iterator over map entries.

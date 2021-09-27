@@ -96,7 +96,7 @@ public class HelloDatabaseWorld implements TransactionWorker {
 					.next();
 			try {
 				// open and access the database within a transaction
-				 if (!ready) {worker.wait();};
+				 if (!ready) {worker.wait();}
 				runner.run(worker);
 			} finally {
 				// close the database outside the transaction

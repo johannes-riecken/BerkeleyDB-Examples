@@ -40,7 +40,7 @@ public class TxnGuideDPL {
         System.exit(-1);
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             // Parse the arguments list
             parseArgs(args);
@@ -59,7 +59,7 @@ public class TxnGuideDPL {
                 threadArray[i].join();
             }
         } catch (Exception e) {
-            System.err.println("TxnGuideDPL: " + e.toString());
+            System.err.println("TxnGuideDPL: " + e);
             e.printStackTrace();
         } finally {
             closeEnv();
@@ -119,8 +119,8 @@ public class TxnGuideDPL {
             try {
                 myStore.close();
             } catch (DatabaseException e) {
-                System.err.println("closeEnv: myStore: " + 
-                    e.toString());
+                System.err.println("closeEnv: myStore: " +
+                        e);
                 e.printStackTrace();
             }
         }
@@ -129,7 +129,7 @@ public class TxnGuideDPL {
             try {
                 myEnv.close();
             } catch (DatabaseException e) {
-                System.err.println("closeEnv: " + e.toString());
+                System.err.println("closeEnv: " + e);
                 e.printStackTrace();
             }
         }
@@ -137,14 +137,14 @@ public class TxnGuideDPL {
 
     private TxnGuideDPL() {}
 
-    private static void parseArgs(String args[]) {
+    private static void parseArgs(String[] args) {
         int nArgs = args.length;
         for(int i = 0; i < args.length; ++i) {
             if (args[i].startsWith("-")) {
                 switch(args[i].charAt(1)) {
                     case 'h':
                         if (i < nArgs - 1) {
-                            myEnvPath = new String(args[++i]);
+                            myEnvPath = args[++i];
                         }
                     break;
                     default:

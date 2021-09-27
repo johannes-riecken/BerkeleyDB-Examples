@@ -182,7 +182,7 @@ public class SampleViews {
             // The key class will be used to instantiate the key object.
             //
             if (!MarshalledKey.class.isAssignableFrom(keyClass)) {
-                throw new IllegalArgumentException(keyClass.toString() +
+                throw new IllegalArgumentException(keyClass +
                                        " does not implement MarshalledKey");
             }
             this.keyClass = keyClass;
@@ -238,7 +238,7 @@ public class SampleViews {
             // The entity class will be used to instantiate the entity object.
             //
             if (!MarshalledEnt.class.isAssignableFrom(entityClass)) {
-                throw new IllegalArgumentException(entityClass.toString() +
+                throw new IllegalArgumentException(entityClass +
                                        " does not implement MarshalledEnt");
             }
         }

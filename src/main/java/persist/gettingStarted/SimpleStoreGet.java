@@ -92,15 +92,15 @@ public class SimpleStoreGet {
         shutdown();
     } 
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         SimpleStoreGet ssg = new SimpleStoreGet();
         try {
             ssg.run();
         } catch (DatabaseException dbe) {
-            System.err.println("SimpleStoreGet: " + dbe.toString());
+            System.err.println("SimpleStoreGet: " + dbe);
             dbe.printStackTrace();
         } catch (Exception e) {
-            System.out.println("Exception: " + e.toString());
+            System.out.println("Exception: " + e);
             e.printStackTrace();
         } 
         System.out.println("All done.");
