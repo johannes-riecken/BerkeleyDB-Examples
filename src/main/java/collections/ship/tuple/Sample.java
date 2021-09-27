@@ -34,8 +34,8 @@ import com.sleepycat.je.DatabaseException;
  */
 public class Sample {
 
-    private SampleDatabase db;
-    private SampleViews views;
+    private final SampleDatabase db;
+    private final SampleViews views;
 
     /**
      * Run the sample program.

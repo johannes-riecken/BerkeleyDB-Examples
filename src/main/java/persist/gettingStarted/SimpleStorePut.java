@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
 
 public class SimpleStorePut {
 
-    private static File envHome = new File("./JEDB");
+    private static final File envHome = new File("./JEDB");
 
     private Environment envmnt;
     private EntityStore store;

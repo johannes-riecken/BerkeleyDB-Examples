@@ -41,7 +41,7 @@ public class AccessExample
          implements Runnable {
 
     // Class Variables of AccessExample class
-    private static boolean create = true;
+    private static final boolean create = true;
     private static final int EXIT_SUCCESS = 0;
     private static final int EXIT_FAILURE = 1;
 
@@ -109,9 +109,9 @@ public class AccessExample
         System.exit(0);
     }
 
-    private Database db;
-    private SortedMap map;
-    private Environment env;
+    private final Database db;
+    private final SortedMap map;
+    private final Environment env;
 
     /**
      *  Constructor for the AccessExample object

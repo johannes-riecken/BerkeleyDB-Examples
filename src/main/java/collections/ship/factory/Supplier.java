@@ -35,9 +35,9 @@ public class Supplier implements Serializable, MarshalledTupleKeyEntity {
     static final String CITY_KEY = "city";
 
     private transient String number;
-    private String name;
-    private int status;
-    private String city;
+    private final String name;
+    private final int status;
+    private final String city;
 
     public Supplier(String number, String name, int status, String city) {
 

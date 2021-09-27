@@ -22,10 +22,10 @@ import java.io.Serializable;
  */
 public class PartData implements Serializable {
 
-    private String name;
-    private String color;
-    private Weight weight;
-    private String city;
+    private final String name;
+    private final String color;
+    private final Weight weight;
+    private final String city;
 
     public PartData(String name, String color, Weight weight, String city) {
 

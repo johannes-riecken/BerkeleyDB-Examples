@@ -43,14 +43,14 @@ public class SampleDatabase {
 	"shipment_supplier_index";
     private static final String SUPPLIER_CITY_INDEX = "supplier_city_index";
 
-    private Environment env;
-    private Database partDb;
-    private Database supplierDb;
-    private Database shipmentDb;
-    private SecondaryDatabase supplierByCityDb;
-    private SecondaryDatabase shipmentByPartDb;
-    private SecondaryDatabase shipmentBySupplierDb;
-    private StoredClassCatalog javaCatalog;
+    private final Environment env;
+    private final Database partDb;
+    private final Database supplierDb;
+    private final Database shipmentDb;
+    private final SecondaryDatabase supplierByCityDb;
+    private final SecondaryDatabase shipmentByPartDb;
+    private final SecondaryDatabase shipmentBySupplierDb;
+    private final StoredClassCatalog javaCatalog;
 
     /**
      * Open all storage containers, indices, and catalogs.

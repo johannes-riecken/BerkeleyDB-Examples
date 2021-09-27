@@ -20,10 +20,10 @@ package collections.ship.entity;
  */
 public class Supplier {
 
-    private String number;
-    private String name;
-    private int status;
-    private String city;
+    private final String number;
+    private final String name;
+    private final int status;
+    private final String city;
 
     public Supplier(String number, String name, int status, String city) {
 

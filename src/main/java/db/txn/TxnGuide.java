@@ -27,8 +27,8 @@ import java.io.FileNotFoundException;
 public class TxnGuide {
 
     private static String myEnvPath = "./";
-    private static String dbName = "mydb.db";
-    private static String cdbName = "myclassdb.db";
+    private static final String dbName = "mydb.db";
+    private static final String cdbName = "myclassdb.db";
 
     // DB handles
     private static Database myDb = null;

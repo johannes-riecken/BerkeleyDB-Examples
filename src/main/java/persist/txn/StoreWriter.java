@@ -26,9 +26,9 @@ public class StoreWriter extends Thread
 {
     private EntityStore myStore = null;
     private Environment myEnv = null;
-    private PrimaryIndex<Integer,PayloadDataEntity> pdKey;
-    private Random generator = new Random();
-    private boolean passTxn = false;
+    private final PrimaryIndex<Integer,PayloadDataEntity> pdKey;
+    private final Random generator = new Random();
+    private final boolean passTxn = false;
 
     private static final int MAX_RETRY = 20;
 

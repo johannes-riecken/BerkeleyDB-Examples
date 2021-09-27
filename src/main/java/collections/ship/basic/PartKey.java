@@ -21,7 +21,7 @@ import java.io.Serializable;
  */
 public class PartKey implements Serializable {
 
-    private String number;
+    private final String number;
 
     public PartKey(String number) {
 

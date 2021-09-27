@@ -108,7 +108,7 @@ public class EventExampleDPL {
     }
 
     /* A BDB environment is roughly equivalent to a relational database. */
-    private Environment env;
+    private final Environment env;
     private EntityStore store;
 
     /*
@@ -119,7 +119,7 @@ public class EventExampleDPL {
     SecondaryIndex<Integer,Date,Event> eventByPrice;
 
     /* Used for generating example data. */
-    private Calendar cal;
+    private final Calendar cal;
 
     /*
      * First manually make a directory to house the BDB environment.

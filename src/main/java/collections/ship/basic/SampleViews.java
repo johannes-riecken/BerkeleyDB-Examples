@@ -22,9 +22,9 @@ import com.sleepycat.collections.StoredMap;
  */
 public class SampleViews {
 
-    private StoredMap partMap;
-    private StoredMap supplierMap;
-    private StoredMap shipmentMap;
+    private final StoredMap partMap;
+    private final StoredMap supplierMap;
+    private final StoredMap shipmentMap;
 
     /**
      * Create the data bindings and collection views.

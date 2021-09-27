@@ -21,7 +21,7 @@ import java.io.Serializable;
  */
 public class SupplierKey implements Serializable {
 
-    private String number;
+    private final String number;
 
     public SupplierKey(String number) {
 

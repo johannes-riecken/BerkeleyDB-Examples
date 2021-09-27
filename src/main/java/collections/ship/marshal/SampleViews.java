@@ -27,12 +27,12 @@ import com.sleepycat.util.RuntimeExceptionWrapper;
  */
 public class SampleViews {
 
-    private StoredSortedMap partMap;
-    private StoredSortedMap supplierMap;
-    private StoredSortedMap shipmentMap;
-    private StoredSortedMap shipmentByPartMap;
-    private StoredSortedMap shipmentBySupplierMap;
-    private StoredSortedMap supplierByCityMap;
+    private final StoredSortedMap partMap;
+    private final StoredSortedMap supplierMap;
+    private final StoredSortedMap shipmentMap;
+    private final StoredSortedMap shipmentByPartMap;
+    private final StoredSortedMap shipmentBySupplierMap;
+    private final StoredSortedMap supplierByCityMap;
 
     /**
      * Create the data bindings and collection views.
@@ -172,7 +172,7 @@ public class SampleViews {
      */
     private static class MarshalledKeyBinding extends TupleBinding {
 
-        private Class keyClass;
+        private final Class keyClass;
 
         /**
          * Construct the binding object.

@@ -37,7 +37,7 @@ public class Shipment implements Serializable, MarshalledTupleKeyEntity {
 
     private transient String partNumber;
     private transient String supplierNumber;
-    private int quantity;
+    private final int quantity;
 
     public Shipment(String partNumber, String supplierNumber, int quantity) {
 

@@ -22,9 +22,9 @@ import java.io.Serializable;
  */
 public class SupplierData implements Serializable {
 
-    private String name;
-    private int status;
-    private String city;
+    private final String name;
+    private final int status;
+    private final String city;
 
     public SupplierData(String name, int status, String city) {
 

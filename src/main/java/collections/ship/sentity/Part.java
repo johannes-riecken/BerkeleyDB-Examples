@@ -30,10 +30,10 @@ import java.io.Serializable;
 public class Part implements Serializable {
 
     private transient String number;
-    private String name;
-    private String color;
-    private Weight weight;
-    private String city;
+    private final String name;
+    private final String color;
+    private final Weight weight;
+    private final String city;
 
     public Part(String number, String name, String color, Weight weight,
                 String city) {

@@ -32,12 +32,12 @@ public class DBWriter extends Thread
     private Database myDb = null;
     private Environment myEnv = null;
     private EntryBinding dataBinding = null;
-    private Random generator = new Random();
+    private final Random generator = new Random();
     private boolean passTxn = false;
 
     private static final int MAX_RETRY = 20;
 
-    private static String[] keys = {"key 1", "key 2", "key 3",
+    private static final String[] keys = {"key 1", "key 2", "key 3",
                                     "key 4", "key 5", "key 6",
                                     "key 7", "key 8", "key 9",
                                     "key 10"};

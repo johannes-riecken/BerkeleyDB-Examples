@@ -21,8 +21,8 @@ import java.io.Serializable;
  */
 public class ShipmentKey implements Serializable {
 
-    private String partNumber;
-    private String supplierNumber;
+    private final String partNumber;
+    private final String supplierNumber;
 
     public ShipmentKey(String partNumber, String supplierNumber) {
 

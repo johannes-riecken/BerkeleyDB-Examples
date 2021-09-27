@@ -22,7 +22,7 @@ import java.io.Serializable;
  */
 public class ShipmentData implements Serializable {
 
-    private int quantity;
+    private final int quantity;
 
     public ShipmentData(int quantity) {
 

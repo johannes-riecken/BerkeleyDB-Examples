@@ -69,10 +69,10 @@ public class EventExample {
     static class Event implements Serializable {
 
         /* This example will add secondary indices on price and accountReps. */
-        private int price;
-        private Set<String> accountReps;
+        private final int price;
+        private final Set<String> accountReps;
 
-        private String customerName;
+        private final String customerName;
         private int quantity;
 
         Event(int price,
@@ -109,7 +109,7 @@ public class EventExample {
     }
 
     /* A BDB environment is roughly equivalent to a relational database. */
-    private Environment env;
+    private final Environment env;
 
     /*
      * A BDB table is roughly equivalent to a relational table with a
@@ -129,7 +129,7 @@ public class EventExample {
     private EntryBinding eventBinding;
 
     /* Used for generating example data. */
-    private Calendar cal;
+    private final Calendar cal;
 
     /*
      * First manually make a directory to house the BDB environment.
@@ -389,7 +389,7 @@ public class EventExample {
      */
     private static class PriceKeyCreator implements SecondaryKeyCreator {
 
-        private EntryBinding dataBinding;
+        private final EntryBinding dataBinding;
 
         PriceKeyCreator(EntryBinding eventBinding) {
             this.dataBinding = eventBinding;

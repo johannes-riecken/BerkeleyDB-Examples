@@ -22,7 +22,7 @@ import java.io.FileNotFoundException;
 public class SimpleStoreGet {
 
 //    private static File envHome = new File("./JEDB");
-    private static File envHome = new File("./tmp");
+    private static final File envHome = new File("./tmp");
 
     private Environment envmnt;
     private EntityStore store;

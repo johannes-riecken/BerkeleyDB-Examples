@@ -19,7 +19,7 @@ package collections.ship.tuple;
  */
 public class PartKey {
 
-    private String number;
+    private final String number;
 
     public PartKey(String number) {
 

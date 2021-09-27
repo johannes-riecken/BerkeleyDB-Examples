@@ -32,11 +32,11 @@ public class SampleDatabase {
     private static final String PART_STORE = "part_store";
     private static final String SHIPMENT_STORE = "shipment_store";
 
-    private Environment env;
-    private Database partDb;
-    private Database supplierDb;
-    private Database shipmentDb;
-    private StoredClassCatalog javaCatalog;
+    private final Environment env;
+    private final Database partDb;
+    private final Database supplierDb;
+    private final Database shipmentDb;
+    private final StoredClassCatalog javaCatalog;
 
     /**
      * Open all storage containers, indices, and catalogs.

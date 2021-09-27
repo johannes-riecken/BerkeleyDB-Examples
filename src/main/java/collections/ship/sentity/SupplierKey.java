@@ -19,7 +19,7 @@ package collections.ship.sentity;
  */
 public class SupplierKey {
 
-    private String number;
+    private final String number;
 
     public SupplierKey(String number) {
 

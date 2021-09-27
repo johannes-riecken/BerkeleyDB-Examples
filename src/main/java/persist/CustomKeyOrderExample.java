@@ -75,8 +75,8 @@ public class CustomKeyOrderExample {
         example.close();
     }
 
-    private Environment env;
-    private EntityStore store;
+    private final Environment env;
+    private final EntityStore store;
 
     private CustomKeyOrderExample(File envHome)
         throws DatabaseException, FileNotFoundException {

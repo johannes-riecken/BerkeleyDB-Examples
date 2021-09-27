@@ -23,12 +23,12 @@ import com.sleepycat.collections.StoredValueSet;
  */
 public class SampleViews {
 
-    private StoredSortedMap partMap;
-    private StoredSortedMap supplierMap;
-    private StoredSortedMap shipmentMap;
-    private StoredSortedMap shipmentByPartMap;
-    private StoredSortedMap shipmentBySupplierMap;
-    private StoredSortedMap supplierByCityMap;
+    private final StoredSortedMap partMap;
+    private final StoredSortedMap supplierMap;
+    private final StoredSortedMap shipmentMap;
+    private final StoredSortedMap shipmentByPartMap;
+    private final StoredSortedMap shipmentBySupplierMap;
+    private final StoredSortedMap supplierByCityMap;
 
     /**
      * Create the data bindings and collection views.

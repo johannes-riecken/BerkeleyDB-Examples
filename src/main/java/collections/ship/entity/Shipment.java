@@ -20,9 +20,9 @@ package collections.ship.entity;
  */
 public class Shipment {
 
-    private String partNumber;
-    private String supplierNumber;
-    private int quantity;
+    private final String partNumber;
+    private final String supplierNumber;
+    private final int quantity;
 
     public Shipment(String partNumber, String supplierNumber, int quantity) {
 

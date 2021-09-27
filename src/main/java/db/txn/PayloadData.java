@@ -11,9 +11,9 @@ package db.txn;
 import java.io.Serializable;
 
 public class PayloadData implements Serializable {
-    private int oID;
-    private String threadName;
-    private double doubleData;
+    private final int oID;
+    private final String threadName;
+    private final double doubleData;
 
     PayloadData(int id, String name, double data) {
         oID = id;

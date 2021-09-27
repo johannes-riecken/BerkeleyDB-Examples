@@ -19,8 +19,8 @@ package collections.ship.sentity;
  */
 public class ShipmentKey {
 
-    private String partNumber;
-    private String supplierNumber;
+    private final String partNumber;
+    private final String supplierNumber;
 
     public ShipmentKey(String partNumber, String supplierNumber) {
 

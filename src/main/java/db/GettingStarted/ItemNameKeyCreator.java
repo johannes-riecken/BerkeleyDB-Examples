@@ -18,7 +18,7 @@ import com.sleepycat.je.SecondaryDatabase;
 
 public class ItemNameKeyCreator implements SecondaryKeyCreator {
 
-    private TupleBinding theBinding;
+    private final TupleBinding theBinding;
 
     // Use the constructor to set the tuple binding
     ItemNameKeyCreator(TupleBinding binding) {

@@ -144,9 +144,9 @@ public class PersonExample {
         example.close();
     }
 
-    private Environment env;
-    private EntityStore store;
-    private PersonAccessor dao;
+    private final Environment env;
+    private final EntityStore store;
+    private final PersonAccessor dao;
 
     private PersonExample(File envHome)
         throws DatabaseException, FileNotFoundException {

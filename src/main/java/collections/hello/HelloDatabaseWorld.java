@@ -39,7 +39,7 @@ import com.sleepycat.je.EnvironmentConfig;
 public class HelloDatabaseWorld implements TransactionWorker {
 
 	private static final String[] INT_NAMES = { "Hello", "Database", "World", };
-	private static boolean create = false;
+	private static final boolean create = false;
 	private static boolean ready = true;
 
 	private Environment env;

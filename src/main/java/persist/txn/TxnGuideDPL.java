@@ -27,7 +27,7 @@ import java.io.FileNotFoundException;
 public class TxnGuideDPL {
 
     private static String myEnvPath = "./";
-    private static String storeName = "exampleStore";
+    private static final String storeName = "exampleStore";
 
     // Handles
     private static EntityStore myStore = null;
