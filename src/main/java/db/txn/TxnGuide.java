@@ -31,9 +31,9 @@ public class TxnGuide {
     private static final String cdbName = "myclassdb.db";
 
     // DB handles
-    private static Database myDb = null;
-    private static Database myClassDb = null;
-    private static Environment myEnv = null;
+    private static Database myDb;
+    private static Database myClassDb;
+    private static Environment myEnv;
 
     private static final int NUMTHREADS = 5;
 

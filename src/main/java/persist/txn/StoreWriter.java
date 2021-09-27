@@ -24,8 +24,8 @@ import java.io.UnsupportedEncodingException;
 
 public class StoreWriter extends Thread 
 {
-    private EntityStore myStore = null;
-    private Environment myEnv = null;
+    private final EntityStore myStore;
+    private final Environment myEnv;
     private final PrimaryIndex<Integer,PayloadDataEntity> pdKey;
     private final Random generator = new Random();
     private final boolean passTxn = false;

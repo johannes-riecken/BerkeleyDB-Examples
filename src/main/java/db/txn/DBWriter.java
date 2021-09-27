@@ -29,11 +29,11 @@ import java.util.Random;
 
 public class DBWriter extends Thread
 {
-    private Database myDb = null;
-    private Environment myEnv = null;
-    private EntryBinding dataBinding = null;
+    private final Database myDb;
+    private final Environment myEnv;
+    private final EntryBinding dataBinding;
     private final Random generator = new Random();
-    private boolean passTxn = false;
+    private boolean passTxn;
 
     private static final int MAX_RETRY = 20;
 

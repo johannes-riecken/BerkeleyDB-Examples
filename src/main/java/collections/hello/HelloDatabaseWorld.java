@@ -67,7 +67,7 @@ public class HelloDatabaseWorld implements TransactionWorker {
 
 		// create the application and run a transaction
 		ArrayList<HelloDatabaseWorld> workers = new ArrayList<HelloDatabaseWorld>();
-		String[] filenames = new String[] { "conf.pak", "cursor.pak",
+		String[] filenames = { "conf.pak", "cursor.pak",
 				"data.pak", "effect1.pak", "effect2.pak", "effect3.pak",
 				"effect4.pak", "effect5.pak", "effect6.pak", "effect7.pak",
 				"effect8.pak", "face.pak", "fonts.pak", "game.pak",

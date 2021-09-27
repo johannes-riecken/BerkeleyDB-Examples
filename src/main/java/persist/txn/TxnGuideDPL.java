@@ -30,8 +30,8 @@ public class TxnGuideDPL {
     private static final String storeName = "exampleStore";
 
     // Handles
-    private static EntityStore myStore = null;
-    private static Environment myEnv = null;
+    private static EntityStore myStore;
+    private static Environment myEnv;
 
     private static final int NUMTHREADS = 5;
 
