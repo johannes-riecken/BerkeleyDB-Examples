@@ -40,7 +40,7 @@ public class SampleDatabase {
     private static final String SHIPMENT_STORE = "shipment_store";
     private static final String SHIPMENT_PART_INDEX = "shipment_part_index";
     private static final String SHIPMENT_SUPPLIER_INDEX =
-	"shipment_supplier_index";
+    "shipment_supplier_index";
     private static final String SUPPLIER_CITY_INDEX = "supplier_city_index";
 
     private final Environment env;

@@ -64,8 +64,8 @@ public class Shipment implements Serializable, MarshalledTupleKeyEntity {
     public String toString() {
 
         return "[Shipment: part=" + partNumber +
-	    " supplier=" + supplierNumber +
-	    " quantity=" + quantity + ']';
+        " supplier=" + supplierNumber +
+        " quantity=" + quantity + ']';
     }
 
     // --- MarshalledTupleKeyEntity implementation ---

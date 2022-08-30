@@ -57,8 +57,8 @@ public class PartData implements Serializable {
     public String toString() {
 
         return "[PartData: name=" + name +
-	    " color=" + color +
-	    " weight=" + weight +
-	    " city=" + city + ']';
+        " color=" + color +
+        " weight=" + weight +
+        " city=" + city + ']';
     }
 }

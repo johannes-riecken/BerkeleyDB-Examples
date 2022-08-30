@@ -76,10 +76,10 @@ public class Part implements Serializable, MarshalledTupleKeyEntity {
     public String toString() {
 
         return "[Part: number=" + number +
-	    " name=" + name +
-	    " color=" + color +
-	    " weight=" + weight +
-	    " city=" + city + ']';
+        " name=" + name +
+        " color=" + color +
+        " weight=" + weight +
+        " city=" + city + ']';
     }
 
     // --- MarshalledTupleKeyEntity implementation ---

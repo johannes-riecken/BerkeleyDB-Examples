@@ -53,7 +53,7 @@ public class Sample {
                 homeDir = args[i];
             } else {
                 System.err.println("Usage:\n java " + Sample.class.getName() +
-				   "\n  [-h <home-directory>]");
+                   "\n  [-h <home-directory>]");
                 System.exit(2);
             }
         }
@@ -136,11 +136,11 @@ public class Sample {
         public void doWork()
             throws Exception {
             printEntries("Parts",
-			 views.getPartEntrySet().iterator());
+             views.getPartEntrySet().iterator());
             printEntries("Suppliers",
-			 views.getSupplierEntrySet().iterator());
+             views.getSupplierEntrySet().iterator());
             printEntries("Shipments",
-			 views.getShipmentEntrySet().iterator());
+             views.getShipmentEntrySet().iterator());
         }
     }
 

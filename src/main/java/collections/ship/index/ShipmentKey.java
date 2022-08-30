@@ -43,6 +43,6 @@ public class ShipmentKey implements Serializable {
     public String toString() {
 
         return "[ShipmentKey: supplier=" + supplierNumber +
-	    " part=" + partNumber + ']';
+        " part=" + partNumber + ']';
     }
 }

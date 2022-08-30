@@ -66,13 +66,13 @@ public class SampleViews {
         //
         partMap =
             new StoredSortedMap(db.getPartDatabase(),
-				partKeyBinding, partDataBinding, true);
+                partKeyBinding, partDataBinding, true);
         supplierMap =
             new StoredSortedMap(db.getSupplierDatabase(),
-				supplierKeyBinding, supplierDataBinding, true);
+                supplierKeyBinding, supplierDataBinding, true);
         shipmentMap =
             new StoredSortedMap(db.getShipmentDatabase(),
-				shipmentKeyBinding, shipmentDataBinding, true);
+                shipmentKeyBinding, shipmentDataBinding, true);
         shipmentByPartMap =
             new StoredSortedMap(db.getShipmentByPartDatabase(),
                                 partKeyBinding, shipmentDataBinding, true);

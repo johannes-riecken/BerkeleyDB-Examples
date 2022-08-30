@@ -54,7 +54,7 @@ public class Sample {
                 homeDir = args[i];
             } else {
                 System.err.println("Usage:\n java " + Sample.class.getName() +
-				   "\n  [-h <home-directory>]");
+                   "\n  [-h <home-directory>]");
                 System.exit(2);
             }
         }
@@ -141,14 +141,14 @@ public class Sample {
         public void doWork()
             throws Exception {
             printValues("Parts",
-			views.getPartSet().iterator());
+            views.getPartSet().iterator());
             printValues("Suppliers",
-			views.getSupplierSet().iterator());
+            views.getSupplierSet().iterator());
             printValues("Suppliers for City Paris",
                         views.getSupplierByCityMap().duplicates(
                                             "Paris").iterator());
             printValues("Shipments",
-			views.getShipmentSet().iterator());
+            views.getShipmentSet().iterator());
             printValues("Shipments for Part P1",
                         views.getShipmentByPartMap().duplicates(
                                             new PartKey("P1")).iterator());
@@ -168,17 +168,17 @@ public class Sample {
         if (parts.isEmpty()) {
             System.out.println("Adding Parts");
             parts.add(new Part("P1", "Nut", "Red",
-			       new Weight(12.0, Weight.GRAMS), "London"));
+                   new Weight(12.0, Weight.GRAMS), "London"));
             parts.add(new Part("P2", "Bolt", "Green",
-			       new Weight(17.0, Weight.GRAMS), "Paris"));
+                   new Weight(17.0, Weight.GRAMS), "Paris"));
             parts.add(new Part("P3", "Screw", "Blue",
-			       new Weight(17.0, Weight.GRAMS), "Rome"));
+                   new Weight(17.0, Weight.GRAMS), "Rome"));
             parts.add(new Part("P4", "Screw", "Red",
-			       new Weight(14.0, Weight.GRAMS), "London"));
+                   new Weight(14.0, Weight.GRAMS), "London"));
             parts.add(new Part("P5", "Cam", "Blue",
-			       new Weight(12.0, Weight.GRAMS), "Paris"));
+                   new Weight(12.0, Weight.GRAMS), "Paris"));
             parts.add(new Part("P6", "Cog", "Red",
-			       new Weight(19.0, Weight.GRAMS), "London"));
+                   new Weight(19.0, Weight.GRAMS), "London"));
         }
     }
 

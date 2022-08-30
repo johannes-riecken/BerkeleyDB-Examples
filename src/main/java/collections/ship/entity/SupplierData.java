@@ -52,7 +52,7 @@ public class SupplierData implements Serializable {
     public String toString() {
 
         return "[SupplierData: name=" + name +
-	    " status=" + status +
-	    " city=" + city + ']';
+        " status=" + status +
+        " city=" + city + ']';
     }
 }

@@ -53,7 +53,7 @@ public class Sample {
                 homeDir = args[i];
             } else {
                 System.err.println("Usage:\n java " + Sample.class.getName() +
-				   "\n  [-h <home-directory>]");
+                   "\n  [-h <home-directory>]");
                 System.exit(2);
             }
         }
@@ -140,20 +140,20 @@ public class Sample {
         public void doWork()
             throws Exception {
             printEntries("Parts",
-			 views.getPartEntrySet().iterator());
+             views.getPartEntrySet().iterator());
             printEntries("Suppliers",
-			 views.getSupplierEntrySet().iterator());
+             views.getSupplierEntrySet().iterator());
             printValues("Suppliers for City Paris",
-			views.getSupplierByCityMap().duplicates(
-							"Paris").iterator());
+            views.getSupplierByCityMap().duplicates(
+                            "Paris").iterator());
             printEntries("Shipments",
-			 views.getShipmentEntrySet().iterator());
+             views.getShipmentEntrySet().iterator());
             printValues("Shipments for Part P1",
-			views.getShipmentByPartMap().duplicates(
-						new PartKey("P1")).iterator());
+            views.getShipmentByPartMap().duplicates(
+                        new PartKey("P1")).iterator());
             printValues("Shipments for Supplier S1",
-			views.getShipmentBySupplierMap().duplicates(
-					    new SupplierKey("S1")).iterator());
+            views.getShipmentBySupplierMap().duplicates(
+                        new SupplierKey("S1")).iterator());
         }
     }
 

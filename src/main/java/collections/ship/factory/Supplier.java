@@ -70,9 +70,9 @@ public class Supplier implements Serializable, MarshalledTupleKeyEntity {
     public String toString() {
 
         return "[Supplier: number=" + number +
-	    " name=" + name +
-	    " status=" + status +
-	    " city=" + city + ']';
+        " name=" + name +
+        " status=" + status +
+        " city=" + city + ']';
     }
 
     // --- MarshalledTupleKeyEntity implementation ---

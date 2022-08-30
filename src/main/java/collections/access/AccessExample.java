@@ -47,9 +47,9 @@ public class AccessExample
 
     public static void usage() {
 
-	System.out.println("usage: java " + AccessExample.class.getName() +
+    System.out.println("usage: java " + AccessExample.class.getName() +
             " [-r] [database]\n");
-	System.exit(EXIT_FAILURE);
+    System.exit(EXIT_FAILURE);
     }
 
     /**
@@ -59,23 +59,23 @@ public class AccessExample
      */
     public static void main(String[] argv) {
 
-	boolean removeExistingDatabase = false;
-	String databaseName = "access.db";
+    boolean removeExistingDatabase = false;
+    String databaseName = "access.db";
 
-	for (int i = 0; i < argv.length; i++) {
-	    if (argv[i].equals("-r")) {
-		removeExistingDatabase = true;
-	    } else if (argv[i].equals("-?")) {
-		usage();
-	    } else if (argv[i].startsWith("-")) {
-		usage();
-	    } else {
-		if ((argv.length - i) != 1)
-		    usage();
-		databaseName = argv[i];
-		break;
-	    }
-	}
+    for (int i = 0; i < argv.length; i++) {
+        if (argv[i].equals("-r")) {
+        removeExistingDatabase = true;
+        } else if (argv[i].equals("-?")) {
+        usage();
+        } else if (argv[i].startsWith("-")) {
+        usage();
+        } else {
+        if ((argv.length - i) != 1)
+            usage();
+        databaseName = argv[i];
+        break;
+        }
+    }
 
         try {
 
@@ -87,8 +87,8 @@ public class AccessExample
                 envConfig.setAllowCreate(true);
             }
             Environment env = new Environment(new File("."), envConfig);
-	    // Remove the previous database.
-	    if (removeExistingDatabase) {
+        // Remove the previous database.
+        if (removeExistingDatabase) {
                 env.removeDatabase(null, databaseName);
             }
 
@@ -120,7 +120,7 @@ public class AccessExample
      *@exception  Exception  Description of the Exception
      */
     public AccessExample(Environment env, String databaseName)
-	throws Exception {
+    throws Exception {
 
         this.env = env;
 
@@ -152,7 +152,7 @@ public class AccessExample
      * Close the database and environment.
      */
     void close()
-	throws DatabaseException {
+    throws DatabaseException {
 
         db.close();
         env.close();
@@ -176,26 +176,26 @@ public class AccessExample
             }
 
             final String reversed =
-		(new StringBuffer(line)).reverse().toString();
+        (new StringBuffer(line)).reverse().toString();
 
             log("adding: \"" +
-		line + "\" : \"" +
-		reversed + "\"");
+        line + "\" : \"" +
+        reversed + "\"");
 
             // Do the work to add the key/data to the HashMap here.
             TransactionRunner tr = new TransactionRunner(env);
             try {
                 tr.run(
-		       new TransactionWorker() {
-			   public void doWork() {
-			       if (!map.containsKey(line.getBytes()))
-				   map.put(line.getBytes(),
+               new TransactionWorker() {
+               public void doWork() {
+                   if (!map.containsKey(line.getBytes()))
+                   map.put(line.getBytes(),
                                            reversed.getBytes());
-			       else
-				   System.out.println("Key " + line +
-						      " already exists.");
-			   }
-		       });
+                   else
+                   System.out.println("Key " + line +
+                              " already exists.");
+               }
+               });
             } catch (com.sleepycat.je.DatabaseException e) {
                 System.err.println("AccessExample: " + e);
                 System.exit(1);
