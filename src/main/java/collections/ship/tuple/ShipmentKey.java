@@ -38,6 +38,7 @@ public class ShipmentKey {
         return supplierNumber;
     }
 
+    @Override
     public String toString() {
 
         return "[ShipmentKey: supplier=" + supplierNumber +

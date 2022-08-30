@@ -42,6 +42,7 @@ public class Weight implements Serializable {
         return units;
     }
 
+    @Override
     public String toString() {
 
         return "[" + amount + ' ' + units + ']';

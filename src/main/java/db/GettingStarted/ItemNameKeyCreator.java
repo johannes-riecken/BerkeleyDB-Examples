@@ -26,6 +26,7 @@ public class ItemNameKeyCreator implements SecondaryKeyCreator {
     }
 
     // Abstract method that we must implement
+    @Override
     public boolean createSecondaryKey(SecondaryDatabase secDb,
              DatabaseEntry keyEntry,    // From the primary
              DatabaseEntry dataEntry,   // From the primary

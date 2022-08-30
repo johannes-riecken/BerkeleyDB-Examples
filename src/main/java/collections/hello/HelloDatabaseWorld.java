@@ -116,6 +116,7 @@ public class HelloDatabaseWorld implements TransactionWorker {
     }
 
     /** Performs work within a transaction. */
+    @Override
     public synchronized void doWork() throws Exception {
 
         writeAndRead();

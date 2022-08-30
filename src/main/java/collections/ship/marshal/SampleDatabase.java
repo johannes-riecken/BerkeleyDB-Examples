@@ -245,6 +245,7 @@ public class SampleDatabase {
          * Extract the city key from a supplier key/value pair.  The city key
          * is stored in the supplier value, so the supplier key is not used.
          */
+        @Override
         public boolean createSecondaryKey(TupleInput primaryKeyInput,
                                           Object valueInput,
                                           TupleOutput indexKeyOutput) {

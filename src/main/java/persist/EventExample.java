@@ -395,6 +395,7 @@ public class EventExample {
             this.dataBinding = eventBinding;
         }
 
+        @Override
         public boolean createSecondaryKey(SecondaryDatabase secondaryDb,
                                           DatabaseEntry keyEntry,
                                           DatabaseEntry dataEntry,

@@ -34,6 +34,7 @@ public class PartKey implements MarshalledKey {
         return number;
     }
 
+    @Override
     public String toString() {
 
         return "[PartKey: number=" + number + ']';
@@ -47,11 +48,13 @@ public class PartKey implements MarshalledKey {
         // instantiate objects of this class.
     }
 
+    @Override
     public void unmarshalKey(TupleInput keyInput) {
 
         this.number = keyInput.readString();
     }
 
+    @Override
     public void marshalKey(TupleOutput keyOutput) {
 
         keyOutput.writeString(this.number);

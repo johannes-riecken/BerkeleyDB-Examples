@@ -48,6 +48,7 @@ public class StoreWriter extends Thread
     // Thread method that writes a series of objects
     // to the store using transaction protection.
     // Deadlock handling is demonstrated here.
+    @Override
     public void run () {
         Transaction txn = null;
 

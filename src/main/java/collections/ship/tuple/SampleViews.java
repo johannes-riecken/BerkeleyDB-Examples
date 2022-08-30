@@ -178,6 +178,7 @@ public class SampleViews {
         /**
          * Create the key object from the stored key tuple entry.
          */
+        @Override
         public Object entryToObject(TupleInput input) {
 
             String number = input.readString();
@@ -187,6 +188,7 @@ public class SampleViews {
         /**
          * Create the stored key tuple entry from the key object.
          */
+        @Override
         public void objectToEntry(Object object, TupleOutput output) {
 
             PartKey key = (PartKey) object;
@@ -211,6 +213,7 @@ public class SampleViews {
         /**
          * Create the entity by combining the stored key and data.
          */
+        @Override
         public Object entryToObject(TupleInput keyInput, Object dataInput) {
 
             String number = keyInput.readString();
@@ -222,6 +225,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public void objectToKey(Object object, TupleOutput output) {
 
             Part part = (Part) object;
@@ -231,6 +235,7 @@ public class SampleViews {
         /**
          * Create the stored data from the entity.
          */
+        @Override
         public Object objectToData(Object object) {
 
             Part part = (Part) object;
@@ -254,6 +259,7 @@ public class SampleViews {
         /**
          * Create the key object from the stored key tuple entry.
          */
+        @Override
         public Object entryToObject(TupleInput input) {
 
             String number = input.readString();
@@ -263,6 +269,7 @@ public class SampleViews {
         /**
          * Create the stored key tuple entry from the key object.
          */
+        @Override
         public void objectToEntry(Object object, TupleOutput output) {
 
             SupplierKey key = (SupplierKey) object;
@@ -287,6 +294,7 @@ public class SampleViews {
         /**
          * Create the entity by combining the stored key and data.
          */
+        @Override
         public Object entryToObject(TupleInput keyInput, Object dataInput) {
 
             String number = keyInput.readString();
@@ -298,6 +306,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public void objectToKey(Object object, TupleOutput output) {
 
             Supplier supplier = (Supplier) object;
@@ -307,6 +316,7 @@ public class SampleViews {
         /**
          * Create the stored data from the entity.
          */
+        @Override
         public Object objectToData(Object object) {
 
             Supplier supplier = (Supplier) object;
@@ -330,6 +340,7 @@ public class SampleViews {
         /**
          * Create the key object from the stored key tuple entry.
          */
+        @Override
         public Object entryToObject(TupleInput input) {
 
             String partNumber = input.readString();
@@ -340,6 +351,7 @@ public class SampleViews {
         /**
          * Create the stored key tuple entry from the key object.
          */
+        @Override
         public void objectToEntry(Object object, TupleOutput output) {
 
             ShipmentKey key = (ShipmentKey) object;
@@ -365,6 +377,7 @@ public class SampleViews {
         /**
          * Create the entity by combining the stored key and data.
          */
+        @Override
         public Object entryToObject(TupleInput keyInput, Object dataInput) {
 
             String partNumber = keyInput.readString();
@@ -377,6 +390,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public void objectToKey(Object object, TupleOutput output) {
 
             Shipment shipment = (Shipment) object;
@@ -387,6 +401,7 @@ public class SampleViews {
         /**
          * Create the stored data from the entity.
          */
+        @Override
         public Object objectToData(Object object) {
 
             Shipment shipment = (Shipment) object;

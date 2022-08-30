@@ -55,6 +55,7 @@ public class CustomKeyOrderExample {
 
         private ReverseOrder() {} // For deserialization
 
+        @Override
         public int compareTo(ReverseOrder o) {
             return o.value.compareTo(value);
         }

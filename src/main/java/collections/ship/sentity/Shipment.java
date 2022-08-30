@@ -66,6 +66,7 @@ public class Shipment implements Serializable {
         return quantity;
     }
 
+    @Override
     public String toString() {
 
         return "[Shipment: part=" + partNumber +

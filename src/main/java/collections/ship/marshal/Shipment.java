@@ -71,6 +71,7 @@ public class Shipment implements Serializable, MarshalledEnt {
         return quantity;
     }
 
+    @Override
     public String toString() {
 
         return "[Shipment: part=" + partNumber +
@@ -86,18 +87,21 @@ public class Shipment implements Serializable, MarshalledEnt {
         // instantiate objects of this class.
     }
 
+    @Override
     public void unmarshalPrimaryKey(TupleInput keyInput) {
 
         this.partNumber = keyInput.readString();
         this.supplierNumber = keyInput.readString();
     }
 
+    @Override
     public void marshalPrimaryKey(TupleOutput keyOutput) {
 
         keyOutput.writeString(this.partNumber);
         keyOutput.writeString(this.supplierNumber);
     }
 
+    @Override
     public boolean marshalSecondaryKey(String keyName, TupleOutput keyOutput) {
 
         if (keyName.equals(PART_KEY)) {

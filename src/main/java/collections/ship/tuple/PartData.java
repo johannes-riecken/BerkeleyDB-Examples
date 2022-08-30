@@ -55,6 +55,7 @@ public class PartData implements Serializable {
         return city;
     }
 
+    @Override
     public String toString() {
 
         return "[PartData: name=" + name +

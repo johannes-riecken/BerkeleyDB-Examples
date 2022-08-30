@@ -122,6 +122,7 @@ public class Sample {
      */
     private class PopulateDatabase implements TransactionWorker {
 
+        @Override
         public void doWork()
             throws Exception {
             addSuppliers();
@@ -140,6 +141,7 @@ public class Sample {
      */
     private class PrintDatabase implements TransactionWorker {
 
+        @Override
         public void doWork()
             throws Exception {
             printValues("Parts",

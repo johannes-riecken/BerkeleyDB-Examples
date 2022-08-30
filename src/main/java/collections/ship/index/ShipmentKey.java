@@ -40,6 +40,7 @@ public class ShipmentKey implements Serializable {
         return supplierNumber;
     }
 
+    @Override
     public String toString() {
 
         return "[ShipmentKey: supplier=" + supplierNumber +

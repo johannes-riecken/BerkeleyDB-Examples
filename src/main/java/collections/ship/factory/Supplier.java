@@ -67,6 +67,7 @@ public class Supplier implements Serializable, MarshalledTupleKeyEntity {
         return city;
     }
 
+    @Override
     public String toString() {
 
         return "[Supplier: number=" + number +
@@ -77,16 +78,19 @@ public class Supplier implements Serializable, MarshalledTupleKeyEntity {
 
     // --- MarshalledTupleKeyEntity implementation ---
 
+    @Override
     public void marshalPrimaryKey(TupleOutput keyOutput) {
 
         keyOutput.writeString(this.number);
     }
 
+    @Override
     public void unmarshalPrimaryKey(TupleInput keyInput) {
 
         this.number = keyInput.readString();
     }
 
+    @Override
     public boolean marshalSecondaryKey(String keyName, TupleOutput keyOutput) {
 
         if (keyName.equals(CITY_KEY)) {
@@ -101,6 +105,7 @@ public class Supplier implements Serializable, MarshalledTupleKeyEntity {
         }
     }
 
+    @Override
     public boolean nullifyForeignKey(String keyName) {
 
         throw new UnsupportedOperationException(keyName);

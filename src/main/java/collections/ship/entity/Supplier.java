@@ -53,6 +53,7 @@ public class Supplier {
         return city;
     }
 
+    @Override
     public String toString() {
 
         return "[Supplier: number=" + number +

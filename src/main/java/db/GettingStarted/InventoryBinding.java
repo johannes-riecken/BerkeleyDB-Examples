@@ -18,6 +18,7 @@ public class InventoryBinding extends TupleBinding {
 
     // Implement this abstract method. Used to convert
     // a DatabaseEntry to an Inventory object.
+    @Override
     public Object entryToObject(TupleInput ti) {
 
         String sku = ti.readString();
@@ -40,6 +41,7 @@ public class InventoryBinding extends TupleBinding {
 
     // Implement this abstract method. Used to convert a
     // Inventory object to a DatabaseEntry object.
+    @Override
     public void objectToEntry(Object object, TupleOutput to) {
 
         Inventory inventory = (Inventory)object;

@@ -42,6 +42,7 @@ public class ShipmentKey implements MarshalledTupleEntry {
         return supplierNumber;
     }
 
+    @Override
     public String toString() {
 
         return "[ShipmentKey: supplier=" + supplierNumber +
@@ -56,12 +57,14 @@ public class ShipmentKey implements MarshalledTupleEntry {
         // instantiate objects of this class.
     }
 
+    @Override
     public void marshalEntry(TupleOutput keyOutput) {
 
         keyOutput.writeString(this.partNumber);
         keyOutput.writeString(this.supplierNumber);
     }
 
+    @Override
     public void unmarshalEntry(TupleInput keyInput) {
 
         this.partNumber = keyInput.readString();

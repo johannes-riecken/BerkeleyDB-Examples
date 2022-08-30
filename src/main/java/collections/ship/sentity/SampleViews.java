@@ -179,6 +179,7 @@ public class SampleViews {
         /**
          * Create the key object from the stored key tuple entry.
          */
+        @Override
         public Object entryToObject(TupleInput input) {
 
             String number = input.readString();
@@ -188,6 +189,7 @@ public class SampleViews {
         /**
          * Create the stored key tuple entry from the key object.
          */
+        @Override
         public void objectToEntry(Object object, TupleOutput output) {
 
             PartKey key = (PartKey) object;
@@ -220,6 +222,7 @@ public class SampleViews {
          * This "tricky" binding returns the stored data as the entity, but
          * first it sets the transient key fields from the stored key.
          */
+        @Override
         public Object entryToObject(TupleInput keyInput, Object dataInput) {
 
             String number = keyInput.readString();
@@ -231,6 +234,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public void objectToKey(Object object, TupleOutput output) {
 
             Part part = (Part) object;
@@ -241,6 +245,7 @@ public class SampleViews {
          * Return the entity as the stored data.  There is nothing to do here
          * since the entity's key fields are transient.
          */
+        @Override
         public Object objectToData(Object object) {
 
             return object;
@@ -262,6 +267,7 @@ public class SampleViews {
         /**
          * Create the key object from the stored key tuple entry.
          */
+        @Override
         public Object entryToObject(TupleInput input) {
 
             String number = input.readString();
@@ -271,6 +277,7 @@ public class SampleViews {
         /**
          * Create the stored key tuple entry from the key object.
          */
+        @Override
         public void objectToEntry(Object object, TupleOutput output) {
 
             SupplierKey key = (SupplierKey) object;
@@ -303,6 +310,7 @@ public class SampleViews {
          * This "tricky" binding returns the stored data as the entity, but
          * first it sets the transient key fields from the stored key.
          */
+        @Override
         public Object entryToObject(TupleInput keyInput, Object dataInput) {
 
             String number = keyInput.readString();
@@ -314,6 +322,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public void objectToKey(Object object, TupleOutput output) {
 
             Supplier supplier = (Supplier) object;
@@ -324,6 +333,7 @@ public class SampleViews {
          * Return the entity as the stored data.  There is nothing to do here
          * since the entity's key fields are transient.
          */
+        @Override
         public Object objectToData(Object object) {
 
             return object;
@@ -345,6 +355,7 @@ public class SampleViews {
         /**
          * Create the key object from the stored key tuple entry.
          */
+        @Override
         public Object entryToObject(TupleInput input) {
 
             String partNumber = input.readString();
@@ -355,6 +366,7 @@ public class SampleViews {
         /**
          * Create the stored key tuple entry from the key object.
          */
+        @Override
         public void objectToEntry(Object object, TupleOutput output) {
 
             ShipmentKey key = (ShipmentKey) object;
@@ -388,6 +400,7 @@ public class SampleViews {
          * This "tricky" binding returns the stored data as the entity, but
          * first it sets the transient key fields from the stored key.
          */
+        @Override
         public Object entryToObject(TupleInput keyInput, Object dataInput) {
 
             String partNumber = keyInput.readString();
@@ -400,6 +413,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public void objectToKey(Object object, TupleOutput output) {
 
             Shipment shipment = (Shipment) object;
@@ -411,6 +425,7 @@ public class SampleViews {
          * Return the entity as the stored data.  There is nothing to do here
          * since the entity's key fields are transient.
          */
+        @Override
         public Object objectToData(Object object) {
 
             return object;

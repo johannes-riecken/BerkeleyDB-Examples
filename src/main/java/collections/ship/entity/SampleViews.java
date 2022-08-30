@@ -182,6 +182,7 @@ public class SampleViews {
         /**
          * Create the entity by combining the stored key and data.
          */
+        @Override
         public Object entryToObject(Object keyInput, Object dataInput) {
 
             PartKey key = (PartKey) keyInput;
@@ -193,6 +194,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public Object objectToKey(Object object) {
 
             Part part = (Part) object;
@@ -202,6 +204,7 @@ public class SampleViews {
         /**
          * Create the stored data from the entity.
          */
+        @Override
         public Object objectToData(Object object) {
 
             Part part = (Part) object;
@@ -229,6 +232,7 @@ public class SampleViews {
         /**
          * Create the entity by combining the stored key and data.
          */
+        @Override
         public Object entryToObject(Object keyInput, Object dataInput) {
 
             SupplierKey key = (SupplierKey) keyInput;
@@ -240,6 +244,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public Object objectToKey(Object object) {
 
             Supplier supplier = (Supplier) object;
@@ -249,6 +254,7 @@ public class SampleViews {
         /**
          * Create the stored data from the entity.
          */
+        @Override
         public Object objectToData(Object object) {
 
             Supplier supplier = (Supplier) object;
@@ -276,6 +282,7 @@ public class SampleViews {
         /**
          * Create the entity by combining the stored key and data.
          */
+        @Override
         public Object entryToObject(Object keyInput, Object dataInput) {
 
             ShipmentKey key = (ShipmentKey) keyInput;
@@ -287,6 +294,7 @@ public class SampleViews {
         /**
          * Create the stored key from the entity.
          */
+        @Override
         public Object objectToKey(Object object) {
 
             Shipment shipment = (Shipment) object;
@@ -297,6 +305,7 @@ public class SampleViews {
         /**
          * Create the stored data from the entity.
          */
+        @Override
         public Object objectToData(Object object) {
 
             Shipment shipment = (Shipment) object;

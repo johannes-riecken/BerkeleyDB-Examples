@@ -68,6 +68,7 @@ public class DBWriter extends Thread
     // Thread method that writes a series of records
     // to the database using transaction protection.
     // Deadlock handling is demonstrated here.
+    @Override
     public void run () {
         Transaction txn = null;
 

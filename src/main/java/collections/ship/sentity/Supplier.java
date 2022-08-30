@@ -72,6 +72,7 @@ public class Supplier implements Serializable {
         return city;
     }
 
+    @Override
     public String toString() {
 
         return "[Supplier: number=" + number +

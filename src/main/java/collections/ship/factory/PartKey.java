@@ -35,6 +35,7 @@ public class PartKey implements MarshalledTupleEntry {
         return number;
     }
 
+    @Override
     public String toString() {
 
         return "[PartKey: number=" + number + ']';
@@ -48,11 +49,13 @@ public class PartKey implements MarshalledTupleEntry {
         // instantiate objects of this class.
     }
 
+    @Override
     public void marshalEntry(TupleOutput keyOutput) {
 
         keyOutput.writeString(this.number);
     }
 
+    @Override
     public void unmarshalEntry(TupleInput keyInput) {
 
         this.number = keyInput.readString();

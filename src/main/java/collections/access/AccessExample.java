@@ -161,6 +161,7 @@ public class AccessExample
     /**
      *  Main processing method for the AccessExample object
      */
+    @Override
     public void run() {
         //
         // Insert records into a Stored Sorted Map DatabaseImpl, where
@@ -187,6 +188,7 @@ public class AccessExample
             try {
                 tr.run(
                new TransactionWorker() {
+               @Override
                public void doWork() {
                    if (!map.containsKey(line.getBytes()))
                    map.put(line.getBytes(),

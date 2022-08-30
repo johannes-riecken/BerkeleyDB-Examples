@@ -76,6 +76,7 @@ public class Supplier implements Serializable, MarshalledEnt {
         return city;
     }
 
+    @Override
     public String toString() {
 
         return "[Supplier: number=" + number +
@@ -92,16 +93,19 @@ public class Supplier implements Serializable, MarshalledEnt {
         // instantiate objects of this class.
     }
 
+    @Override
     public void unmarshalPrimaryKey(TupleInput keyInput) {
 
         this.number = keyInput.readString();
     }
 
+    @Override
     public void marshalPrimaryKey(TupleOutput keyOutput) {
 
         keyOutput.writeString(this.number);
     }
 
+    @Override
     public boolean marshalSecondaryKey(String keyName, TupleOutput keyOutput) {
 
         if (keyName.equals(CITY_KEY)) {

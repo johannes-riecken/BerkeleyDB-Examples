@@ -236,6 +236,7 @@ public class SampleDatabase {
          * Extract the city key from a supplier key/value pair.  The city key
          * is stored in the supplier value, so the supplier key is not used.
          */
+        @Override
         public boolean createSecondaryKey(TupleInput primaryKeyInput,
                                           Object valueInput,
                                           TupleOutput indexKeyOutput) {
@@ -274,6 +275,7 @@ public class SampleDatabase {
          * Extract the part key from a shipment key/value pair.  The part key
          * is stored in the shipment key, so the shipment value is not used.
          */
+        @Override
         public boolean createSecondaryKey(TupleInput primaryKeyInput,
                                           Object valueInput,
                                           TupleOutput indexKeyOutput) {
@@ -309,6 +311,7 @@ public class SampleDatabase {
          * supplier key is stored in the shipment key, so the shipment value is
          * not used.
          */
+        @Override
         public boolean createSecondaryKey(TupleInput primaryKeyInput,
                                           Object valueInput,
                                           TupleOutput indexKeyOutput) {

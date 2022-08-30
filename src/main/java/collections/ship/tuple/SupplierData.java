@@ -49,6 +49,7 @@ public class SupplierData implements Serializable {
         return city;
     }
 
+    @Override
     public String toString() {
 
         return "[SupplierData: name=" + name +
